@@ -1,4 +1,4 @@
-/* Mengimpor Font Poppins dari Google Fonts */
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 * {
@@ -23,7 +23,7 @@ body {
     color: var(--text-color);
 }
 
-/* --- HEADER / NAVBAR --- */
+
 .header {
     position: fixed;
     top: 1rem;
@@ -110,7 +110,7 @@ body {
     cursor: pointer;
 }
 
-/* --- SECTIONS UMUM --- */
+
 section {
     min-height: 100vh;
     width: 100%;
@@ -125,7 +125,7 @@ section {
     margin-bottom: 4rem;
 }
 
-/* --- ABOUT SECTION --- */
+
 .about {
     display: flex;
     align-items: center;
@@ -212,17 +212,14 @@ section {
     color: #3a7bd5;
 }
 
-/* --- EXPERIENCE SECTION --- */
+
 .experience-info {
     display: flex;
     align-items: center;
     gap: 5rem;
 }
 
-.experience-info img {
-    width: 24vw;
-    border-radius: 3rem;
-}
+
 
 .grid {
     display: grid;
@@ -237,9 +234,10 @@ section {
     display: flex;
     flex-direction: column;
     align-items: baseline;
-    justify-content: left;
+    justify-content: center;
     cursor: pointer;
     transition: 0.3s;
+    align-items: center;
 }
 
 .grid-card:hover {
@@ -262,7 +260,7 @@ section {
     color: transparent;
 }
 
-/* --- PROJECTS SECTION --- */
+
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -297,7 +295,7 @@ section {
     border-color: white;
 }
 
-/* --- CONTACT SECTION --- */
+
 .input-box {
     display: flex;
     flex-direction: column;
@@ -325,7 +323,7 @@ section {
     transform: translateY(-50%);
 }
 
-/* --- FOOTER --- */
+
 footer {
     height: 10rem;
     width: 100%;
@@ -346,7 +344,7 @@ footer ul li a {
     font-weight: 600;
 }
 
-/* --- RESPONSIVITAS --- */
+
 @media (max-width: 1280px) {
     .header { padding: 1rem 2rem; gap: 2rem; }
     .about-container { gap: 5rem; }
