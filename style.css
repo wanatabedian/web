@@ -1,0 +1,373 @@
+/* Mengimpor Font Poppins dari Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --main-gradient: linear-gradient(90deg, #00d2ff 0%, #3a7bd5 100%);
+    --hover-gradient: linear-gradient(90deg, #ff00cc 0%, #3333ff 100%);
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+/* --- HEADER / NAVBAR --- */
+.header {
+    position: fixed;
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(8px);
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border-radius: 3rem;
+    z-index: 1000;
+}
+
+.logo {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-wrap: nowrap;
+    transition: 0.3s;
+}
+
+.logo span {
+    background: var(--main-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    position: relative;
+    color: white;
+    font-weight: 300;
+}
+
+.nav-links a::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 3px;
+    bottom: -5px;
+    left: 0;
+    background: var(--main-gradient);
+    border-radius: 3rem;
+    transition: 0.3s;
+}
+
+.nav-links li:hover a::before {
+    width: 100%;
+}
+
+.visit-btn {
+    padding: 0.8rem 1.5rem;
+    border-radius: 3rem;
+    border: none;
+    font-weight: 500;
+    font-size: 1rem;
+    color: white;
+    cursor: pointer;
+    background: var(--main-gradient);
+    text-wrap: nowrap;
+    transition: 0.3s;
+}
+
+.visit-btn:hover {
+    transform: scale(1.05);
+    background: var(--hover-gradient);
+}
+
+#menu-icon {
+    font-size: 2rem;
+    display: none;
+    cursor: pointer;
+}
+
+/* --- SECTIONS UMUM --- */
+section {
+    min-height: 100vh;
+    width: 100%;
+    padding: 8rem 12%;
+    position: relative;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 4rem;
+}
+
+/* --- ABOUT SECTION --- */
+.about {
+    display: flex;
+    align-items: center;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10rem;
+}
+
+.about img {
+    width: 300x;
+    width: 30vW;
+    height: rem;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.info-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    text-align: center;
+}
+
+.info-box h3 {
+    font-size: 2.5rem;
+    font-weight: 500;
+    opacity: 0.8;
+}
+
+.info-box h1 {
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+.info-box span {
+    background: var(--main-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.btn-group {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.btn {
+    padding: 0.8rem 1.5rem;
+    border-radius: 3rem;
+    border: 2px solid black;
+    cursor: pointer;
+    font-weight: 600;
+    text-wrap: nowrap;
+    transition: 0.3s;
+    background: white;
+}
+
+.btn:hover {
+    background: black;
+    color: white;
+}
+
+.socials {
+    display: flex;
+    gap: 2rem;
+}
+
+.socials i {
+    font-size: 2.5rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.socials i:hover {
+    transform: scale(1.2);
+    color: #3a7bd5;
+}
+
+/* --- EXPERIENCE SECTION --- */
+.experience-info {
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+}
+
+.experience-info img {
+    width: 24vw;
+    border-radius: 3rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.grid-card {
+    border: 2px solid black;
+    border-radius: 3rem;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: left;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.grid-card:hover {
+    transform: scale(1.02);
+    background-color: black;
+    color: white;
+}
+
+.grid-card i {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.grid-card span {
+    font-size: 1.5rem;
+    font-weight: 600;
+    background: var(--main-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+/* --- PROJECTS SECTION --- */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.project-card {
+    padding: 3rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+    border: 2px solid black;
+    border-radius: 3rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    background-color: black;
+    color: white;
+    transform: translateY(-10px) scale(1.02);
+}
+
+.project-card img {
+    width: 20vw;
+    border-radius: 1rem;
+}
+
+.project-card:hover .btn {
+    border-color: white;
+}
+
+/* --- CONTACT SECTION --- */
+.input-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 5rem;
+}
+
+.input {
+    position: relative;
+}
+
+.input input {
+    border-radius: 3rem;
+    border: 2px solid black;
+    padding: 2rem 8rem;
+    font-size: 2rem;
+}
+
+.input i {
+    position: absolute;
+    font-size: 4rem;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+}
+
+/* --- FOOTER --- */
+footer {
+    height: 10rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+footer ul {
+    display: flex;
+    gap: 3rem;
+}
+
+footer ul li a {
+    color: black;
+    font-weight: 600;
+}
+
+/* --- RESPONSIVITAS --- */
+@media (max-width: 1280px) {
+    .header { padding: 1rem 2rem; gap: 2rem; }
+    .about-container { gap: 5rem; }
+}
+
+@media (max-width: 768px) {
+    #menu-icon { display: block; }
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem;
+        flex-direction: column;
+        text-align: center;
+        background-color: rgba(0,0,0,0.9);
+        border-radius: 1rem;
+    }
+    .nav-links.active { display: flex; }
+    .about-container, .experience-info { flex-direction: column; text-align: center; }
+    .grid { grid-template-columns: 1fr; }
+    .about img, .experience-info img { width: 60vw; }
+}
